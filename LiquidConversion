@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class conversion {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Is the measurement in cups or liters?");
+        String measurementType = input.nextLine();
+        Double d = 4.22675284;
+        float conversionNumber = d.floatValue();
+        if (measurementType == "cups") {
+           System.out.println("How many cups?"); 
+           Float cupsAmount = input.nextFloat();
+           Float cupsToLitersAmount = cupsAmount / conversionNumber;
+           
+
+        
+           
+        }
+        
+    }
+}
