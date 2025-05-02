@@ -11,7 +11,7 @@ public class App {
            System.out.println("How many cups?"); 
            Float cupsAmount = input.nextFloat();
            Float cupsToLitersAmount = cupsAmount / conversionNumber;
-           System.out.println(cupsAmount() + "Cups is" + cupsToLitersAmount() + " Liters");
+           System.out.println(cupsAmount + "Cups is" + cupsToLitersAmount + " Liters");
 
 
         
