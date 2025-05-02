@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-class conversion {
-    public static void main(String[] args) {
+public class App {
+    public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         System.out.println("Is the measurement in cups or liters?");
         String measurementType = input.nextLine();
@@ -11,11 +11,11 @@ class conversion {
            System.out.println("How many cups?"); 
            Float cupsAmount = input.nextFloat();
            Float cupsToLitersAmount = cupsAmount / conversionNumber;
-           
+           System.out.println(cupsAmount() + "Cups is" + cupsToLitersAmount() + " Liters");
+
 
         
            
         }
-        
     }
 }
