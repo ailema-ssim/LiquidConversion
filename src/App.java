@@ -25,13 +25,36 @@ public class App {
             System.out.println("Is the measurement in cups or liters?");
             measurementType = input.nextLine();
         }
-        
+        boolean a = false;
+        do {
+            try {
+                System.out.println("Do you have another measurement you would like to convert?");   
+                Scanner b = new Scanner(System.in)
+                boolean yesOrNo = b.nextBoolean();
+                if (yesOrNo == true) {
+                    System.out.println("Is the measurement in cups or liters?");
+                    measurementType = input.nextLine();
+                }
+                else if (yesOrNo == false) {
+                    System.out.println("Have a good day");
+                }
+                else {
+                    System.out.println("Answer must be true or false");
+                    System.out.println("Do you have another measurement you would like to convert?");
+                    yesOrNo = b.nextBoolean();
+                }
+
+            }       
+        }
+       
 
 
-        
-           
-        
     }
 }
+
+
+
+
+    
 
 
