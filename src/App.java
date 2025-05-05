@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -29,28 +30,28 @@ public class App {
         do {
             try {
                 System.out.println("Do you have another measurement you would like to convert?");   
-                Scanner b = new Scanner(System.in)
-                boolean yesOrNo = b.nextBoolean();
+                Scanner b = new Scanner(System.in);
+                Boolean yesOrNo = b.nextBoolean();
                 if (yesOrNo == true) {
                     System.out.println("Is the measurement in cups or liters?");
                     measurementType = input.nextLine();
-                }
-                else if (yesOrNo == false) {
+                } else if (yesOrNo == false) {
                     System.out.println("Have a good day");
                 }
-                else {
+                } catch (InputMismatchException e ) {
                     System.out.println("Answer must be true or false");
                     System.out.println("Do you have another measurement you would like to convert?");
-                    yesOrNo = b.nextBoolean();
+                    Boolean yesOrNo = b.nextBoolean(); 
                 }
+                } while (!a);
 
-            }       
+                   
         }
        
-
+    
 
     }
-}
+
 
 
 
