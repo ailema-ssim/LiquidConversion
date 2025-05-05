@@ -13,15 +13,13 @@ public class App {
            Float cupsAmount = input.nextFloat();
            Float cupsToLitersAmount = cupsAmount / conversionNumber;
            System.out.println(cupsAmount + "Cups is" + cupsToLitersAmount + " Liters");
-        }
-        if (measurementType.equalsIgnoreCase ("liters"))
+        } else if (measurementType.equalsIgnoreCase ("liters"))
         {
         System.out.println("How many liters?"); 
            Float litersAmount = input.nextFloat();
            Float litersToCupsAmount = litersAmount / conversionNumber;
            System.out.println(litersAmount + "Liters is" + litersToCupsAmount + " Cups");
-        }
-        else  
+        } else  
         {
             System.out.println("Measurement type must be cups or liters.");
             System.out.println("Is the measurement in cups or liters?");
