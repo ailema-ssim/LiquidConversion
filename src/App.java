@@ -3,7 +3,11 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        DoConversion();
+        doConversion();
+        goAgain();
+    }
+
+    public static void goAgain() {
         boolean a = false;
         do {
             Scanner input = new Scanner(System.in);
@@ -20,12 +24,11 @@ public class App {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Answer must be true or false");
-                System.out.println("Do you have another measurement you would like to convert?");
-                Boolean yesOrNo = input.nextBoolean();
+                goAgain();
             }
         } while (!a);
-
     }
+
 
     private static void doConversion() {
         System.out.println("Is the measurement in cups or liters?");
