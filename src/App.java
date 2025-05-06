@@ -17,7 +17,7 @@ public class App {
         do {
             Scanner input = new Scanner(System.in);
             try {
-                // Asks the usr if they would like to make another conversion
+                // Asks the user if they would like to make another conversion
                 System.out.println("Do you have another measurement you would like to convert? true or false");
 
                 Boolean yesOrNo = input.nextBoolean();
@@ -29,7 +29,7 @@ public class App {
                     System.out.println("Have a good day");
                     break;
                 }
-            // If user makes a typo, prints accetable answers and runs goAgain
+            // If user makes a typo, prints acceptable answers and runs goAgain
             } catch (InputMismatchException e) {
                 System.out.println("Answer must be true or false");
                 goAgain();
@@ -43,7 +43,7 @@ public class App {
         System.out.println("Is the measurement in cups or liters?");
         Scanner input = new Scanner(System.in);
         String measurementType = input.nextLine();
-        // Conversion number betweeen cups and liters
+        // Conversion number between cups and liters
         Double d = 4.22675284;
         float conversionNumber = d.floatValue();
         // If answer cups, asks how many cups and prints how many liters it is
