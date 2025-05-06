@@ -2,33 +2,34 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {       
-        Scanner input = new Scanner(System.in);
-        DoConversion(input);
+    public static void main(String[] args) throws Exception {
+        DoConversion();
         boolean a = false;
         do {
-            Scanner b = new Scanner(System.in);
+            Scanner input = new Scanner(System.in);
             try {
                 System.out.println("Do you have another measurement you would like to convert? true or false");
 
-                Boolean yesOrNo = b.nextBoolean();
+                Boolean yesOrNo = input.nextBoolean();
 
                 if (yesOrNo == true) {
-                   DoConversion(input);
+                    doConversion();
                 } else if (yesOrNo == false) {
                     System.out.println("Have a good day");
+                    break;
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Answer must be true or false");
                 System.out.println("Do you have another measurement you would like to convert?");
-                Boolean yesOrNo = b.nextBoolean();
+                Boolean yesOrNo = input.nextBoolean();
             }
         } while (!a);
 
     }
 
-    private static void DoConversion(Scanner input) {
+    private static void doConversion() {
         System.out.println("Is the measurement in cups or liters?");
+        Scanner input = new Scanner(System.in);
         String measurementType = input.nextLine();
         Double d = 4.22675284;
         float conversionNumber = d.floatValue();
@@ -44,8 +45,7 @@ public class App {
             System.out.println(litersAmount + " Liters is " + litersToCupsAmount + " Cups");
         } else {
             System.out.println("Measurement type must be cups or liters.");
-            System.out.println("Is the measurement in cups or liters?");
-            measurementType = input.nextLine();
+            doConversion();
         }
     }
 }
